@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Inter, sans-serif;
+            padding: 20px;
+        }
+        button {
+            background-color: #18A0FB;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0D8DE3;
+        }
+    </style>
+</head>
+<body>
+    <button id="createRect">Create Random Rectangle</button>
+    <script>
+        document.getElementById('createRect').onclick = () => {
+            parent.postMessage({ pluginMessage: { type: 'create-rectangle' } }, '*');
+        };
+    </script>
+</body>
+</html> 
