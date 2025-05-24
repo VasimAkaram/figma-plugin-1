@@ -13,7 +13,7 @@ function getRandomColor() {
         b: Math.random()
     };
 }
-
+//good working code
 // Listen for messages from the UI
 figma.ui.onmessage = async (msg) => {
     if (msg.type === 'create-rectangle') {
